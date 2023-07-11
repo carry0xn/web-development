@@ -1,0 +1,141 @@
+<!--
+    1. Una Web principal “index.html” donde se muestra información del lugar, algún video,
+    audio, imágenes, lo que quieran colocar para que se vea bien y muestre información
+    sobre la clínica.
+    a. Esta Web debe tener un menú principal y un pie de página.
+    b. Debe tener una zona para login, donde pueden entrar pacientes o doctores:
+    i. Si se ingresa el usuario “mirtita” clave “123” deben pasar a mostrar la
+    Web 2 “paciente.html” y deben enviar como parámetro el nombre del
+    usuario ingresado.
+    ii. Si se ingresa el usuario “house”, clave “123” deben pasar a mostrar la
+    Web 3 “doctor.html” y deben enviar como parámetro el nombre del
+    usuario ingresado.
+    iii. Si se ingresa otro valor deben mostrar “Usuario incorrecto” y no abrir
+    ninguna otra Web.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanatorio Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+            <i class="fas fa-hospital icon"></i>
+            <h2 class="logo">Sanatorio Web</h2>
+            </div>
+            <div class="nav-buttons">
+            <a href="logIn.html"><button class="login-button">Iniciar sesión</button></a>
+            <button class="contact-button">Contacto</button>
+            </div>
+        </nav>  
+    </header>
+    <section class="drop-down-menu">
+      <div class="especificaciones">
+        <ul class="especialidades">
+          <li class="item">
+            <details>
+              <summary>Especialidades Médicas</summary>
+              <ul>
+                <li class="lista">ANESTESIOLOGIA</li>
+                <li class="lista">AUDIOLOGIA</li>
+                <li class="lista">CARDIOLOGIA</li>
+                <li class="lista">DERMATOLOGIA</li>
+                <li class="lista">DIETOLOGIA</li>
+                <li class="lista">ECOCARDIOGRAFIA</li>
+                <li class="lista">ECOGRAFIA</li>
+                <li class="lista">GINECOLOGIA</li>
+                <li class="lista">HEMOTERAPIA</li>
+              </ul>
+            </details>
+          </li>
+          <li class="item">
+            <details>
+              <summary>Atención al Paciente</summary>
+              <ul>
+                <li class="lista">Resultado Hisopados COVID</li>
+                <li class="lista">Novedades COVID</li>
+                <li class="lista">Central de turnos</li>
+                <li class="lista">Videoconsulta</li>
+                <li class="lista">Recetas</li>
+                <li class="lista">Información Útil</li>
+                <li class="lista">Derechos del paciente y su familia</li>
+                <li class="lista">Entidades</li>
+                <li class="lista">Pacientes PAMI</li>
+              </ul>
+            </details>
+          </li>
+          <li class="item">
+          <details>
+            <summary>Institucional</summary>
+              <ul>
+                <li class="lista">Autoridades</li>
+                <li class="lista">Historia</li>
+                <li class="lista">Código de ética</li>
+                <li class="lista">Política de calidad</li>
+                <li class="lista">Gestión de Calidad</li>
+                <li class="lista">Videos Institucionales</li>
+              </ul>
+          </details>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="slider">
+        <ul>
+          <li><img src="./img/1140-covid-19-hospital-esp.jpg" alt="" class="image"></li>
+          
+          <li><img src="./img/capacidad-hospitalaria-n.jpg" alt="" class="image"></li>
+          
+          <li><img src="./img/Hospitales-futuro.jpg" alt="" class="image"></li>
+          
+          <li><img src="./img/1140-emergency-room-esp.jpg" alt="" class="image"></li>
+        </ul>
+    </section>
+    <section>
+      <div class="atencion-al-paciente">
+        <h2>Central de turnos</h2>
+        <p>¡Conocé los medios disponibles!</p>
+        <p>A través de WhatsApp: 11-XXXX-XX00<br>de lunes a viernes de 8 a 19 horas</p>
+        <button class="boton"><i class="fab fa-whatsapp"></i> WhatsApp </button>
+        <p>Ingresando a tu portal de salud digital desde nuestra página web las 24 horas:</p>
+        <button class="boton"><i class="fas fa-medkit"></i> Portal de Salud</button>
+        <p>Por mensaje directo a través de nuestras redes sociales, de lunes a viernes de 8 a 19 horas</p>
+        <button class="boton"><i class="fab fa-facebook"></i> Facebook </button>
+        
+        <button class="boton"><i class="fab fa-instagram"></i> Instagram </button>
+        <p>Llamando por teléfono al 4959-8300, de lunes a viernes de 8 a 19 horas</p>
+        <h3>Más rápido. Más fácil. Más conectados.</h3>
+      </div>
+    </section>
+    <section class="video">
+      <h2>Te invitamos a conocer una de nuestras instituciones de salud.</h2>
+        <video controls class="video-hospital">
+          <source src="./img/X2Download.app-Hospital de Clínicas - Buenos Aires, Argentina (HD).mp4" type="video/mp4">
+        </video>
+    </section>
+    
+
+  <footer>
+      <div class="footer-texto">
+          <i class="fas fa-hospital"></i>
+          <h3>Contacto</h3>
+          <p>Dirección: Calle principal 123, Ciudad</p>
+          <p>Teléfono: 123-456-7890</p>
+          <p>Email: info@hospital.com</p>
+      </div>
+      <div class="footer-bottom">
+          <p>Todos los derechos reservados &copy; 2023 Sanatorio Web</p>
+      </div>
+  </footer>
+  <script src="./js/paciente.js"></script>
+  <script src="./js/doctor.js"></script>
+  <script src="./js/logIn.js"></script>
+</body>
+</html>

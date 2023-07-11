@@ -1,0 +1,169 @@
+<!--
+    La tercera Web “doctor.html” es la que vería un doctor, supongamos 
+    “Gregory House, usuario: house”
+    a. Debe mostrar los datos del doctor. Aquí también tomen el usuario 
+    que llegó como parámetro y lo muestran con un texto de bienvenida.
+    b. Esta Web también muestra los turnos, pero desde la perspectiva 
+    del doctor:
+    i. Mostrar los turnos de la semana, pero agrupados por cada día.
+    1. Cada turno debe ser una tarjeta que indique el horario, los
+    datos del paciente y las observaciones.
+    2. Agrupen las tarjetas por día, para eso pueden usar diferentes
+    colores o separarlas de alguna forma que sea fácil de leer los
+    turnos por día.
+    3. Las tarjetas se deben mostrar en columnas (usen grid o flexgid)
+    y debe ir ajustando la cantidad de columnas mostradas a
+    medida que se achica la ventana. Se espera que en el tamaño
+    más chico se vea solo una columna, como en un celular.
+    4. Por las dudas aclaramos, esas “tarjetas” serían como los
+    productos que uno ve al buscar en un catálogo online donde
+    cada “producto” tiene foto, descripción, precio, etc. Pero en
+    este caso mostramos los datos de un turno y no un producto.
+    c. Se debe poder volver a la Web principal.
+    d. Mostrar el mismo pie de página que la Web principal.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanatorio Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="logo-container">
+        <i class="fas fa-hospital icon"></i>
+        <h2 class="logo">Sanatorio Web</h2>
+        
+        </div>
+        <div class="nav-buttons">
+        <a href="logIn.html"><button class="login-button">Soy Paciente</button></a>
+        <a href="./index.html"><button class="contact-button">Volver Inicio</button></a>
+        </div>
+    </nav>  
+    </header>
+    <section class="turnos">
+        <div class="datos-doctor">
+            <div class="bienvenida">
+                <h1>Bienvenido, <span id="doctorName"></span></h1>
+            </div>
+            <p>Especialidad: <span id="doctorSpecialty"></span></p>
+            <p>Email: <span id="doctorEmail"></span></p>
+            <p>Teléfono: <span id="doctorPhone"></span></p>
+        </div>
+        <h2 class="turnos-semana">Aquí tiene sus turnos de la semana: </h2>
+        <div class="dia">
+        <h3>Lunes</h3>
+            <div class="tarjetas">
+                <div class="tarjeta">
+                    <h4>Horario: 10:00 AM - 11:00 AM</h4>
+                    <p>Paciente: Miles Morales</p>
+                    <p>Contacto: 444-1234</p>
+                    <p>Observaciones: El paciente presenta síntomas de gripe. Recetar medicación.</p>
+                </div>
+                <div class="tarjeta">
+                    <h4>Horario: 11:30 AM - 12:30 AM</h4>
+                    <p>Paciente: Miguel O'Hara </p>
+                    <p>Contacto: 555-1234</p>
+                    <p>Observaciones: El paciente presenta constantes migrañas. Recetar vacaciones.</p>
+                </div>
+                <div class="tarjeta">
+                    <h4>Horario: 13:00 AM - 14:00 AM</h4>
+                    <p>Paciente: Jessica Drew</p>
+                    <p>Contacto: 777-1234</p>
+                    <p>Observaciones: La paciente tiene 5 meses de embarazo. Preguntar alergias.</p>
+                </div>
+            </div>
+        </div>
+      <div class="dia">
+        <h3>Martes</h3>
+        <div class="tarjetas">
+            <div class="tarjeta">
+                <h4>Horario: 10:00 AM - 11:00 AM</h4>
+                <p>Paciente: Gwen Stacy</p>
+                <p>Contacto: 888-1234</p>
+                <p>Observaciones: El paciente presenta muchas lesiones. Recetar analgesicos</p>
+            </div>
+            <div class="tarjeta">
+                <h4>Horario: 11:30 AM - 12:30 AM</h4>
+                <p>Paciente: Peter Parker </p>
+                <p>Contacto: 555-1234</p>
+                <p>Observaciones: El paciente presenta constantes migrañas. Preguntar hace cuanto no cambia de lentes.</p>
+            </div>
+            <div class="tarjeta">
+                <h4>Horario: 13:00 AM - 14:00 AM</h4>
+                <p>Paciente: Peni Parker</p>
+                <p>Contacto: 999-1234</p>
+                <p>Observaciones: La paciente presenta sintomas de depresion. Recomendar psicologo.</p>
+            </div>
+        </div>
+      </div>
+      <div class="dia">
+        <h3>Miercoles</h3>
+        <div class="tarjetas">
+            <div class="tarjeta">
+                <h4>Horario: 10:00 AM - 11:00 AM</h4>
+                <p>Paciente: May Parker</p>
+                <p>Contacto: 101-1234</p>
+                <p>Observaciones: El paciente presenta problemas oculares. Recomendar Oftalmologo</p>
+            </div>
+            <div class="tarjeta">
+                <h4>Horario: 11:30 AM - 12:30 AM</h4>
+                <p>Paciente: Hobart Brown </p>
+                <p>Contacto: 111-1234</p>
+                <p>Observaciones: El paciente presenta constantes migrañas debido a sus rastas.</p>
+            </div>
+            <div class="tarjeta">
+                <h4>Horario: 13:00 AM - 14:00 AM</h4>
+                <p>Paciente: Rio Morales</p>
+                <p>Contacto: 121-1234</p>
+                <p>Observaciones: La paciente presenta sintomas de estres. Recetar vacaciones.</p>
+            </div>
+        </div>
+      </div>
+      <div class="dia">
+        <h3>Jueves</h3>
+        <div class="tarjetas">
+            <div class="tarjeta">
+                <h4>Horario: 10:00 AM - 11:00 AM</h4>
+                <p>Paciente: Pavitr Prabhakar</p>
+                <p>Contacto: 131-1234</p>
+                <p>Observaciones: El paciente presenta muchas lesiones. Recetar analgesicos</p>
+            </div>
+            <div class="tarjeta">
+                <h4>Horario: 11:30 AM - 12:30 AM</h4>
+                <p>Paciente: Jonah Jameson  </p>
+                <p>Contacto: 141-1234</p>
+                <p>Observaciones: El paciente presenta constantes dolores de garganta y presion alta.</p>
+            </div>
+            <div class="tarjeta">
+                <h4>Horario: 13:00 AM - 14:00 AM</h4>
+                <p>Paciente: Ben Reilly</p>
+                <p>Contacto: 151-1234</p>
+                <p>Observaciones: La paciente presenta sintomas del sindrome del impostor. Recomendar psicologo.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+        <div class="footer-texto">
+            <i class="fas fa-hospital"></i>
+            <h3>Contacto</h3>
+            <p>Dirección: Calle principal 123, Ciudad</p>
+            <p>Teléfono: 123-456-7890</p>
+            <p>Email: info@hospital.com</p>
+        </div>
+        <div class="footer-bottom">
+            <p>Todos los derechos reservados &copy; 2023 Sanatorio Web</p>
+        </div>
+    </footer>
+
+    <script src="./js/paciente.js"></script>
+    <script src="./js/doctor.js"></script>
+    <script src="./js/logIn.js"></script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+@import url(./logIn.css);
+@import url(./doctor.css);
+@import url(./paciente.css);
+
+body{
+  background-color: blue;
+}
+
+/*NAVBAR*/
+.logo{
+  float: left;
+  font-size: 30px;
+}
+
+.icon {
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 30px; 
+    cursor: pointer;
+}
+nav{
+    width: 100%;
+    background-color: rgb(0, 0, 104);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.nav-buttons {
+    display: flex;
+}
+  
+.login-button {
+    background-color: blue;
+    color: white;
+    padding: 8px 16px;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    float: right;
+}
+  
+.contact-button {
+    background-color: green;
+    color: white;
+    padding: 8px 16px;
+    margin-right: 15px;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    float: right;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/*SECTION*/
+.drop-down-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 130px;
+}
+.especialidades{
+  display: flex;
+}
+
+.especialidades ul ,
+.especialidades li {
+  list-style: none;
+  margin: 5px;
+}
+
+.especificaciones details {
+  border: 1px solid rgb(0, 0, 87);
+  padding: 10px;
+
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 20px;
+  transition: 0.5s ease;
+}
+.lista:hover{
+  background-color: aliceblue;
+} 
+
+.especificaciones summary {
+  cursor: pointer;
+  display: flex;
+  transition: 0.5s ease;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.especificaciones summary:hover {
+  text-decoration: underline rgb(0, 0, 87);
+}
+
+.especificaciones details[open] {
+  background-color: rgb(167, 176, 255);
+}
+
+.atencion-al-paciente,
+.drop-down-menu {
+  background-color: #3b7fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+/*CARRUSEL*/
+.slider{
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+.slider > ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+  
+  animation: cambio 20s infinite alternate;
+}
+
+.slider li {
+  list-style: none;
+}
+
+.slider img {
+  width: 100vw;
+  height: 50vw;
+}
+
+
+@keyframes cambio{
+  0% {margin-left: 0;}
+  20% {margin-left: 0;}
+
+  25% {margin-left: -100%;}
+  45% {margin-left: -100%;}
+
+  50% {margin-left: -200%;}
+  70% {margin-left: -200%;}
+
+  75% {margin-left: -300%;}
+  100% {margin-left: -300%;}
+}
+
+
+/*OTRO SECTION*/
+.atencion-al-paciente{
+  padding: 20px;
+  max-width: 100vw;
+}
+.boton{
+  background-color: blue;
+  border: none;
+  width: 30vh;
+  cursor: pointer;
+  height: 40px;
+  margin: 2px;
+  font-size: 20px;
+}
+
+.atencion-al-paciente > h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.atencion-al-paciente > p {
+  font-size: 20px;
+}
+
+/*VIDEO*/
+
+.video{
+  display: block;
+  text-align: center;
+}
+
+.video-hospital{
+  width: 100vw;
+  height: 50vw;
+}
+
+/*FOOTER*/
+
+footer {
+  background-color: #f2f2f2;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer i {
+  font-size: 20px;
+}
+
+.footer-texto {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footer-contact h3 {
+  font-size: 18px;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+}
+
+.footer-bottom {
+  background-color: #ddd;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+/*RESPONSIVE*/
+@media (max-width: 720px) {
+
+  .especialidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .especialidades summary {
+    cursor: pointer;
+  }
+  .boton{
+    font-size: 15px;
+  }
+}

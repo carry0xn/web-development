@@ -1,0 +1,142 @@
+<!--
+    2. Esta segunda Web se debe llamar “paciente.html” y es una Web que sería la que vería
+    un paciente, supongamos que es la Web que vería el paciente “Apellido y nombre:
+    Legrand Mirtha, usuario: mirtita”.
+    a. Se debe mostrar el usuario que llegó como parámetro desde la Web principal
+    agregando un texto de bienvenida, por ejemplo “Bienvenido/a mirtita” siendo
+    ‘mirtita’ el usuario de ejemplo que les dimos, pero sería el valor obtenido del
+    parámetro que llegó.
+    b. Debe tener una zona donde muestre en una tabla todos los turnos que tiene
+    sacados hasta el momento el paciente. Cada fila debe mostrar los datos de
+    cada turno (fecha, hora, especialidad, medico, observaciones y lo que quieran
+    sumar).
+    Todos los datos mostrados son simulados, completen toda la Web como la
+    vería ese usuario logueado ‘mirtita’.
+    c. Se debe poder cancelar un turno, se recomienda agregar un botón en cada fila
+    del turno mostrado. Solo es estético el botón no pretendemos que cancele
+    realmente nada.
+    d. Una zona donde se puedan sacar nuevos turnos. Esto debe ser un formulario
+    que pida (por lo menos): Especialidad (un combo de selección), Médico (otro
+    combo de selección), Fecha y Hora, Email del paciente, Observaciones. Agregar
+    un botón “Reservar turno”.
+    Se espera que se valide que los campos no estén vacíos. Armar mensajes con
+    los avisos “Turno reservado correctamente” o “Verifique los datos del turno” si
+    le falta completar algo.
+    e. Se debe poder volver a la Web principal.
+    f. Mostrar el mismo pie de página que la Web principal.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanatorio Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="logo-container">
+        <i class="fas fa-hospital icon"></i>
+        <h2 class="logo">Sanatorio Web</h2>
+        
+        </div>
+        <div class="nav-buttons">
+            <a href="logIn.html"><button class="login-button">Soy Doctor</button></a>
+            <a href="./index.html"><button class="contact-button">Volver Inicio</button></a>
+            </div>
+    </nav>  
+    </header>
+    <section class="perfil-paciente">
+        <div class="turnos-paciente">
+            <div class="bienvenida">
+                <h1>Bienvenido, <span id="pacienteName"></span></h1>
+            </div>
+            <h2>Tus Turnos: </h2>
+            <table class="turnosTable">
+                <tr>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Especialidad</th>
+                <th>Médico</th>
+                <th>Observaciones</th>
+                <th>Acciones</th>
+                </tr>
+                <tr>
+                <td>2023-07-05</td>
+                <td>10:00</td>
+                <td>Cardiología</td>
+                <td>Gregory House</td>
+                <td>Control de presión arterial</td>
+                <td><button>Cancelar</button></td>
+                </tr>
+                <tr>
+                <td>2023-07-10</td>
+                <td>15:30</td>
+                <td>Dermatología</td>
+                <td>Gregory House</td>
+                <td>Evaluación de lunares</td>
+                <td><button>Cancelar</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="reservacion">
+            <h2>Reservar nuevo turno</h2>
+            
+            <form class="nuevoTurnoForm" onsubmit="return validarFormulario(event)">
+                <label for="especialidad">Especialidad:</label>
+                <select id="especialidad" required>
+                    <option value="">Seleccionar</option>
+                    <option value="ANESTESIOLOGIA">ANESTESIOLOGIA</option>
+                    <option value="AUDIOLOGIA">AUDIOLOGIA</option>
+                    <option value="CARDIOLOGIA">CARDIOLOGIA</option>
+                    <option value="DERMATOLOGIA">DERMATOLOGIA</option>
+                    <option value="DIETOLOGIA">DIETOLOGIA</option>
+                    <option value="ECOCARDIOGRAFIA">ECOCARDIOGRAFIA</option>
+                    <option value="ECOGRAFIA">ECOGRAFIA</option>
+                    <option value="GINECOLOGIA">GINECOLOGIA</option>
+                    <option value="HEMOTERAPIA">HEMOTERAPIA</option>
+                </select>
+
+                <label for="medico">Medico:</label>
+                <select id="medico" required>
+                    <option value="">Seleccionar</option>
+                    <option value="Gregory House">Gregory House</option>
+                </select>
+            
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" required>
+            
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" required>
+            
+                <label for="email">Email del paciente:</label>
+                <input type="email" id="email" required>
+            
+                <label for="observaciones">Observaciones:</label>
+                <textarea id="observaciones" rows="4" required></textarea>
+                
+                <button type="submit">Reservar turno</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-texto">
+            <i class="fas fa-hospital"></i>
+            <h3>Contacto</h3>
+            <p>Dirección: Calle principal 123, Ciudad</p>
+            <p>Teléfono: 123-456-7890</p>
+            <p>Email: info@hospital.com</p>
+        </div>
+        <div class="footer-bottom">
+            <p>Todos los derechos reservados &copy; 2023 Sanatorio Web</p>
+        </div>
+    </footer>
+    <script src="./js/paciente.js"></script>
+    <script src="./js/doctor.js"></script>
+    <script src="./js/logIn.js"></script>
+    <script src="./js/form.js"></script>
+</body>
+</html>

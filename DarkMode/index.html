@@ -1,0 +1,88 @@
+<!--
+    Para practicar JS les proponemos que utilicen de base alguna Web de la última actividad (o pueden hacer una nueva) 
+    y que apliquen JavaScript en la misma.
+    Agregar con JS lo siguiente (como mínimo):
+    - Crear una versión oscura que se active/desactive con un botón como en el ejemplo visto en clase. Si su Web no 
+    tiene colores claros, pueden hacer que cambie de colores la Web con el botón.
+    - Agregar algún campo de texto que luego se muestre modificado en la Web, hay un ejemplo de esto en la clase de hoy.
+    Si se animan a investigar y hacer algo distinto sería muy bueno dado que lo comparten en el foro y lo pueden ver todos 
+    sus compañeros, si ya tienen experiencia en JS intenten colaborar con esto. 
+    ¡A experimentar con JS!
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+
+    <title>Evanescence</title>
+</head>
+<body>
+    <div class="dark-mode-toggle">
+        <input type="checkbox" id="darkModeToggle">
+        <label for="darkModeToggle"><i class="fas fa-moon"></i></label>
+    </div>
+    <section class="section">
+      <div class="title">
+        <h1>Evanescence</h1>
+        <img src="./img/Evanescence_-_Fallen.png" alt="">
+        <p>Evanescence es una banda estadounidense de rock fundada en Little Rock, Arkansas, en 1995.</p>
+        <h2>¡Conoce a los Integrantes!</h2>
+      </div>
+
+      <div class="about-center section-center">
+        <article class="about">
+
+          <div class="btn-container">
+            <button class="tab-btn active" data-id="Amy_Lee">Amy Lee</button>
+            <button class="tab-btn" data-id="Troy_McLawhorn">Troy McLawhorn</button>
+            <button class="tab-btn" data-id="Will_Hunt">Will Hunt</button>
+            <button class="tab-btn" data-id="Emma_Anzai">Emma Anzai</button>
+            <button class="tab-btn" data-id="Tim_McCord">Tim McCord</button>
+          </div>
+          <div class="about-content">
+
+            <div class="content active" id="Amy_Lee">
+                <img src="./img/AmyLee.jpg" alt="">
+                <h4>Amy Lee</h4>
+                <p>Cantante, Pianista, Diseñadora y Compositora</p>
+            </div>
+
+            <div class="content" id="Troy_McLawhorn">
+                <img src="./img/TroyMcLawhorn.jpg" alt="">
+                <h4>Troy McLawhorn</h4>
+                <p>Guitarrista, Vocalista y Compositor</p>
+            </div>
+
+            <div class="content" id="Will_Hunt">
+                <img src="./img/WillHunt.jpg" alt="">
+                <h4>Will Hunt</h4>
+                <p>Baterista </p>
+            </div>
+
+            <div class="content" id="Emma_Anzai">
+                <img src="./img/EmmaAnzai.jpg" alt="">
+                <h4>Emma Anzai</h4>
+                <p>Bajista y Corista</p>
+            </div>
+
+            <div class="content" id="Tim_McCord">
+                <img src="./img/TimMcCord.jpg" alt="">
+                <h4>Tim McCord</h4>
+                <p>Bajista</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- javascript -->
+    <script src="script.js"></script>
+  </body>
+</html>

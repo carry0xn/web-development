@@ -1,0 +1,68 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 100px;
+    background-color: #000000;
+}
+
+nav {
+    background-color: blue; /* Rojo para la temática de Spider-Man */;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+.titulo {
+    background-color: blue;
+    text-align: center;
+    padding: 10px;
+    color: #ff0000;
+    text-shadow: 2px 2px 2px #000000;
+}
+p{
+    color: white;
+}
+.producto-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .producto-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .producto-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.producto-item {
+    padding: 10px;
+    border: 2px solid #ff0000;
+    text-align: center;
+}
+
+.prod-img {
+    height: 200px;
+}
+
+.btn-saber-mas {
+    background-color: #ff0000;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btn-saber-mas:hover {
+    background-color: rgb(185, 3, 3);
+}
+
+  

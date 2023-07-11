@@ -1,0 +1,46 @@
+<!--
+    Parte 1
+    Crear un login a partir de alguna Web que ya tengan lista.
+    Agreguen una zona de login en la misma, ya sea en una nueva página, o dentro de la Web principal que tengan 
+    usando alguna zona visible. Modifiquen el código para tener por lo menos 3 usuarios y claves. Mostrar el error 
+    cuando no se ingresan credenciales válidas  (como en el ejemplo) y abran una nueva página mostrando el usuario 
+    cuando es correcto el ingreso. Apliquen las validaciones de campos vacios.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./scr/style.css">
+    <title>Incia Sesion</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-links">
+              <a href="#">Gmail</a>
+              <a href="#">Imágenes</a>
+              <img src="./scr/img/apps_FILL0_wght400_GRAD0_opsz48.png" alt="" class="icon-google">
+              <img src="./scr/img/account_circle_FILL0_wght400_GRAD0_opsz48.png" alt=""class="icon-google">
+            </div>
+        </nav>
+    </header>
+    <main>
+            <h1>Login</h1>
+            <form id="loginForm">
+                <div>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required>
+                </div>
+                    <div id="errorMessage" class="error-message"></div>
+                    <button type="submit">Login</button>
+            </form>
+      
+    </main>
+    <script src="./scr/js/script.js"></script>  
+</body>
+</html>

@@ -1,0 +1,66 @@
+.bienvenida{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bienvenida > h1{
+    font-size: 30px;
+    margin: 0;
+}
+.datos-doctor {
+    margin-top: 10px;
+}
+.datos-doctor p{
+    font-size: 25px;
+}
+
+.tarjeta,
+.datos-doctor{
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.turnos-semana{
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    color: #f2f2f2;
+}
+.turnos {
+    padding: 20px;
+    display: block;
+    margin-top: 100px;
+}
+  
+.dia {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: rgb(8, 0, 114);
+    padding: 10px;
+    border: 2px solid black;
+}
+
+
+.tarjetas{
+    display: flex;
+}
+.dia > h3 {
+    text-align: center;
+    font-size: 25px;
+    margin: 0;
+    text-transform: uppercase;
+    background-color: rgb(52, 140, 255);
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+@media (max-width: 720px) {
+    .tarjetas{
+        display: block;
+    }
+}

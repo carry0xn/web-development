@@ -1,0 +1,46 @@
+<!--
+    Parte 2
+
+    Además les proponemos que intenten crear una página simple similar a un buscador al estilo de google y que tenga un 
+    campo de texto. Crear un código que al hacer click en "Buscar" los lleve al resultado de Google usando el texto 
+    ingresado en el campo de texto de la Web. Tengan en cuenta este fragmento que les damos para su funcionamiento:
+
+        window.location.href = "https://www.google.com/search?q="
+
+    Recuerden sumar a eso la variable donde tengan el texto que ingresó el usuario, por ejemplo si la variable se llama 
+    "buscado" quedaría:
+
+        window.location.href = "https://www.google.com/search?q=" + buscado
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./scr/style.css">
+    <title>Document</title>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-links">
+              <a href="#">Gmail</a>
+              <a href="#">Imágenes</a>
+              <img src="./scr/img/apps_FILL0_wght400_GRAD0_opsz48.png" alt="" class="icon-google">
+              <a href="./logIn.html"><img src="./scr/img/account_circle_FILL0_wght400_GRAD0_opsz48.png" alt=""class="icon-google"></a>
+            </div>
+        </nav>
+    </header>
+    <div class="buscador">
+        <div>
+            <img src="./scr/img/google_logo__2015_present__purple_version_by_mattjacks2003_delz70m-fullview.png" alt="" class="google-logo">
+            <input type="text" id="searchInput">
+            <button onclick="buscar()" id="searchButton">Buscar Con Google</button>
+            <button id="luckyButton">Voy a Tener Suerte</button>
+          </div>
+    </div>
+    <script src="./scr/js/script.js"></script>  
+  </body>
+</html>

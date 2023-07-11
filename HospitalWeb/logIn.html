@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanatorio Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+            <i class="fas fa-hospital icon"></i>
+            <h2 class="logo">Sanatorio Web</h2>
+            </div>
+            <div class="nav-buttons">
+            <a href="logIn.html"><button class="login-button">Iniciar sesión</button></a>
+            <button class="contact-button">Contacto</button>
+            </div>
+        </nav>  
+    </header>
+    <section class="inicia-sesion">
+        <div class="logo">
+            <img src="./img/logo.png" alt="">
+        </div>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Usuario" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button type="submit" id="loginButton">Iniciar Sesión</button>
+        </form>
+        <p id="loginMessage"></p>
+        <p id="welcomeMessage"></p>
+    </section>
+    <footer>
+        <div class="footer-texto">
+            <i class="fas fa-hospital"></i>
+            <h3>Contacto</h3>
+            <p>Dirección: Calle principal 123, Ciudad</p>
+            <p>Teléfono: 123-456-7890</p>
+            <p>Email: info@hospital.com</p>
+        </div>
+        <div class="footer-bottom">
+            <p>Todos los derechos reservados &copy; 2023 Sanatorio Web</p>
+        </div>
+    </footer>
+    <script src="./js/paciente.js"></script>
+    <script src="./js/doctor.js"></script>
+    <script src="./js/logIn.js"></script>
+  
+</body>
+</html>
